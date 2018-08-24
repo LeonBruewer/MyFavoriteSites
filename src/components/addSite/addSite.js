@@ -32,15 +32,17 @@ chayns.ready.then(function() {
         var mail = document.querySelector('#inpMail').value;
         var comment = document.querySelector('#inpComment').value;
 
-
-        
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
             chayns.intercom.sendMessageToPage({ 
                 text: 'Name: ' + name + '\n Straße: ' + street + '\n PLZ: ' + plz + '\n Ort: ' + ort + '\n E-Mail: ' + mail + '\n Kommentar: ' + comment
             }).then(function(data){            
                 if(data.status == 200)
                 chayns.dialog.alert('','Antrag wurde gestellt');
             });
-            
+        }
+        else {
+            chayns.dialog.alert('', 'Du musst eine gültige E-Mail Adresse angeben');
+        }
     }
    
   })((window.addSite = {}), chayns, window);
