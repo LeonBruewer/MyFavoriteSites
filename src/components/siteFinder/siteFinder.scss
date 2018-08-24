@@ -1,0 +1,130 @@
+.ListItem {
+    width: 110%;
+    border-bottom: 1px solid #5d6779;
+    margin-left: -9px;
+    padding-left: 9px;
+}
+.ListItem__head {
+    padding: 0 9px;
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+.ListItem__Arrow {
+    width: 20px;
+    opacity: .6;
+}
+            
+.ListItem__Image {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.ListItem__Image img {
+    height: 100%;
+    width: 100%;
+    outline: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.ListItem .ListItem__head .ListItem__Title .ListItem__Title--headline {
+    margin: 0;
+}
+
+.ListItem__Title--description {
+    margin: 0;
+    font-size: 85%;
+    opacity: .75;
+}
+    
+.ListItem--clickable {
+    cursor: pointer;
+}
+
+.ListItem--clickable:hover {
+    background-color: #ffffff25;
+}
+
+.ListItem__body {
+    max-height: 0px;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1) -0.1s;
+    will-change: max-height;
+    overflow: hidden;
+}
+
+.ListItem__content {
+    padding: 9px 9px 9px 29px;
+}
+
+.Suche {      
+    position: absolute;
+    top: 4px;
+    right: 9px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    max-height: 28px;
+    transform: translate3d(0, 0, 0);
+}
+
+.Suche {
+    transition: opacity .3s, transform .3s;
+    transform: translate3d(100%, 0, 0);
+    opacity: 0;
+}
+
+.accordion--open .Suche {      
+    transition: opacity .3s, transform .3s;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.accordion__head--search--wrapper {
+    overflow: hidden;
+    display: inline-table;
+    width: 200px;
+}
+.accordion__head--search {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: max-width .3s;
+}
+                
+            
+
+input {
+    width: 100%;
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-color: #5d6779;
+    padding: 4px 8px;
+    border-radius: 0 !important;
+    font-size: 14px !important;
+}
+
+.Suche label {
+    max-height: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.Suche i {
+    opacity: .6;
+    font-size: 14px !important;
+}
+                            
+.Suche--accordion {
+    width: 40%;
+    float: right;
+}
+
+#showMoreDiv {
+    display: none;
+    text-align: right;
+}

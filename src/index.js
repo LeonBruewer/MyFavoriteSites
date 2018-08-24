@@ -2,6 +2,7 @@
 import modeSwitchInit from './components/modeswitch/modeSwitch';
 import personFinderInit from './components/personFinder/personFinder';
 import SERVER_URL from './constants/server-url';
+import './components/siteFinder/siteFinder';
 
 const init = async () => {
     await chayns.ready;
